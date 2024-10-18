@@ -1,10 +1,15 @@
 package com.sky.context;
 
 
-
+/**
+ * 存储和管理当前线程的用户 ID
+ */
 public class BaseContext {
 
-    // 使用 ThreadLocal 存储当前线程的用户 ID
+    /*
+    使用 ThreadLocal 存储当前线程的用户 ID,
+    为每个线程提供一个独立的变量副本，确保线程安全。
+     */
     public static ThreadLocal<Long> threadLocal = new ThreadLocal<>();
 
     /**

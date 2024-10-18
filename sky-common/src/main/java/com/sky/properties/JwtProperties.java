@@ -4,23 +4,28 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+/**
+ * JWT令牌相关配置
+ */
 @Component
 @ConfigurationProperties(prefix = "sky.jwt")
 @Data
+
 public class JwtProperties {
 
     /**
-     * 管理端员工生成jwt令牌相关配置
+     * 管理端员工
      */
-    private String adminSecretKey;
-    private long adminTtl;
-    private String adminTokenName;
+    private String adminSecretKey;  // 密钥
+    private long adminTtl;          // 有效期限（毫秒）
+    private String adminTokenName;  // 令牌名称
 
     /**
-     * 用户端微信用户生成jwt令牌相关配置
+     * 用户端微信用户
      */
-    private String userSecretKey;
-    private long userTtl;
-    private String userTokenName;
+    private String userSecretKey;   // 密钥
+    private long userTtl;           // 有效期限（毫秒）
+    private String userTokenName;   // 令牌名称
+
 
 }

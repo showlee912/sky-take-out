@@ -51,7 +51,7 @@ public class EmployeeController {
         Employee employee = employeeService.login(employeeLoginDTO);
 
         // 登录成功后，生成jwt令牌
-        Map<String, Object> claims = new HashMap<>();
+        Map<String, Object> claims = new HashMap<>();//存储JWT中的员工id信息
         claims.put(JwtClaimsConstant.EMP_ID, employee.getId());
         String token = JwtUtil.createJWT(jwtProperties.getAdminSecretKey(), jwtProperties.getAdminTtl(), claims);
 
