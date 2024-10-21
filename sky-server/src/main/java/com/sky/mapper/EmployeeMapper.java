@@ -12,7 +12,7 @@ public interface EmployeeMapper {
 
     /**
      * 根据用户名查询员工
-     * @param username
+     * @param username 员工名称
      * @return
      */
     @Select("select * from employee where username = #{username}")
@@ -35,5 +35,12 @@ public interface EmployeeMapper {
      * @return
      */
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 更新员工信息
+     *
+     * @param employee 员工
+     */
+    void update(Employee employee);
 }
 
