@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * JWT令牌相关配置
  */
 @Component
-@ConfigurationProperties(prefix = "sky.jwt")
+@ConfigurationProperties(prefix = "sky.jwt")//配置在application.yml中
 @Data
 
 public class JwtProperties {
