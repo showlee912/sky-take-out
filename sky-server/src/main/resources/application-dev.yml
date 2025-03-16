@@ -6,8 +6,18 @@ sky:
     database: sky_take_out
     username: root
     password: 123456
+  redis:
+    host: localhost
+    port: 6379
+    database: 1
+  wechat:
+    appid: wx14121d4fd61fb4a0
+    secret: 625e8f6d375953aeb26794aa94d25afe
+
   alioss:
     endpoint: oss-cn-wuhan-lr.aliyuncs.com
     access-key-id: LTAI5tGsb5wnxkQDUDU2BWXk
     access-key-secret: SAjKFsq2hcitXAuC7vBk41YEwMZmvR
     bucket-name: sky-take-out-showlee
+
+
