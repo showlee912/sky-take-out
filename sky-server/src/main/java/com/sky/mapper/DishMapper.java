@@ -77,4 +77,5 @@ public interface DishMapper {
      */
     List<Dish> getDishList(Dish dish);
 
+    List<Dish> list(Dish dish);
 }
