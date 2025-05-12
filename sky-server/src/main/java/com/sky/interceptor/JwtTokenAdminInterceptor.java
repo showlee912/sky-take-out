@@ -42,14 +42,14 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
         String token = request.getHeader(jwtProperties.getAdminTokenName());
         //2、校验令牌
         try {
-            log.info("jwt校验:{}", token);
-            //利用JWT秘钥解析JWT令牌
-            Claims claims = JwtUtil.parseJWT(jwtProperties.getAdminSecretKey(), token);
-            //解析员工id
-            Long empId = Long.valueOf(claims.get(JwtClaimsConstant.EMP_ID).toString());
-            log.info("当前员工id：", empId);
-            ////将员工id存储到ThreadLocal
-            BaseContext.setCurrentId(empId);
+//            log.info("jwt校验:{}", token);
+//            //利用JWT秘钥解析JWT令牌
+//            Claims claims = JwtUtil.parseJWT(jwtProperties.getAdminSecretKey(), token);
+//            //解析员工id
+//            Long empId = Long.valueOf(claims.get(JwtClaimsConstant.EMP_ID).toString());
+//            log.info("当前员工id：", empId);
+//            ////将员工id存储到ThreadLocal
+//            BaseContext.setCurrentId(empId);
             return true;
         } catch (Exception ex) {
             response.setStatus(401);//不通过，响应401状态码

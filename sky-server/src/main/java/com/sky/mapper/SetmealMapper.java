@@ -44,10 +44,11 @@ public interface SetmealMapper {
     Setmeal getById(Long id);
 
     /**
-     * 修改套餐
+     * 根据id修改套餐
      *
-     * @param setmeal the setmeal
+     * @param setmeal
      */
+    @AutoFill(OperationType.UPDATE)
     void update(Setmeal setmeal);
 
 
@@ -72,6 +73,7 @@ public interface SetmealMapper {
             "from setmeal_dish sd left join dish d on sd.dish_id = d.id " +
             "where sd.setmeal_id = #{setmealId}")
     List<DishItemVO> getDishItemBySetmealId(Long setmealId);
+
 
 
 }
